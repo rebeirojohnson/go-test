@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+  go_lang:
+    image: docker.go-test
+    container_name: learnyser.go-test-container
+    ports:
+      - "7001:8000"
+    restart: always
+    networks:
+      - lb_net
+        
+networks:
+  lb_net:
+    name: lb_net
+    external: true
+    
+
+    
